@@ -107,10 +107,16 @@ There's multiple [storage solutions in DVC](https://dvc.org/doc/user-guide/data-
     </details>
 
 4. What info does each .dvc file contain?
-   <details> <summary>Hint</summary> 
+   <details> <summary>Hint: Open the files in a text editor or on unix based systems (e.g. Linux or Mac) you can use `less` or `cat` in the terminal to view them </summary> 
+    less (view individual files): 
     <pre> 
        less *.dvc # use :n, :p, q, to go to next file, previous file and quit
     </pre>
+    cat (prints the contents of all files):
+      <pre> 
+       cat *.dvc
+    </pre>
+    note: The * here just means anything so in this case any file name with the .dvc extension
     </details>
 
 ### Exercise 3: Using a remote
