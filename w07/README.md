@@ -20,6 +20,8 @@ For the exercises:
 
 For the lecture:
 
+* [ML-Ops.org: Motivation](https://ml-ops.org/content/motivation)
+* [ML-Ops.org: MLOps principles](https://ml-ops.org/content/mlops-principles)
 * [ML-Ops.org: Three levels of ML Software](https://ml-ops.org/content/three-levels-of-ml-software)
 * [ML-Ops.org: End-to-End ML](https://ml-ops.org/content/end-to-end-ml-workflow)
 * [Google & MLOps levels](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
