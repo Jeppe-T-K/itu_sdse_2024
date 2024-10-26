@@ -42,6 +42,7 @@ For the lecture:
 > <li>Start a data science project with version control that follows the CCDS format</li>
 > <li>Explain the motivation for the structure of a data science project</li>
 > <li>Share your repo with others and work on the same code</li>
+> </ul>
 
 Whenever you start a coding project, there's always the question of how you will structure the code.
 
