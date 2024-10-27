@@ -89,7 +89,8 @@ But enough theory for now. Let's start with the exercises!
 > <ul>
 > <li>Write/create a basic Dockerfile that can run a basic DS project [e.g., CCDS]</li>
 > <li>Explain the workflow and processes for using Docker</li>
-> <li>Motivate the typical ways you can modify Docker containers at runtime</li>
+> <li>Motivate the typical ways why you would modify Docker containers at runtime</li>
+> <li>Describe image repositories and explain their usage</li>
 > </ul>
 
 As described in the previous section, Docker is really a way to run code in a reproducible way.
@@ -148,37 +149,56 @@ As described in the previous section, Docker is really a way to run code in a re
 ## Exercise 2: Build the image
 
 1. <details> <summary> Build the train.dockerfile </summary>
-   Exercise description
+   Normally you just need to run <code>docker build .</code>, but since we want to use a specific .dockerfile, we have to modify it slightly:
+   <details><summary>Hint:</summary><code>docker build -f train.dockerfile .</code></details>
+
    </details>
 
-2. <details> <summary> Add version/tag </summary>
-   Exercise description
+2. <details> <summary> Add a meaningful name by version/tag </summary>
+   Just building the image can make it hard to find again.
+
+   Adding tags when building the image is typically the easiest way to deal with this. You can also add tags after it has been built but then you need to know the image id.
+
+   <details><summary>Hint:</summary><code>docker build -f train.dockerfile -t iris-train:1.0.0 .</code></details>
    </details>
 
-3. <details> <summary> Modify a file (e.g., requirements.txt) </summary>
-   Exercise description
+3. <details> <summary> Changing files/fixing errors </summary>
+   It's possible that you need to rebuild the image because of some errors. Can you spot what the error is now?
+   
+   <details><summary>Hint:</summary>Python version and requirements.txt does not have scikit-learn</details>
+   
+   <pre>Question: why is it faster building it now?</pre>
    </details>
+   
 
 ## Exercise 3: Run your image
 
 1. <details> <summary> Run your latest image </summary>
-   Exercise description
+   The basic <code>docker run &lt;image&gt;</code> is pretty straight-forward. But what is your image id?
+
+   <details><summary>Hint to find list of images</summary><code>docker images</code></details>
    </details>
 
-2. <details> <summary> Try different arguments </summary>
-   -i
+2. <details> <summary> Solving issues with different arguments </summary>
+   <a href="https://docs.docker.com/reference/cli/docker/container/run/">Full list of arguments here</a>
+    
+   -i (--interactive) for going "into" the container and run commands interactively.
 
-   -d
+   -d (--detach) to don't have the process run in your terminal but detached in the background instead.
 
-   -p
+   -p (--publish)
+   <details><code>docker run -p 10000:8080 iris-train</code></details>
 
-   -v
+   -v (--volume)
+   <details><code>docker run -v ./artifacts:/usr/local/app/artifacts iris-train</code></details>
 
-   -e
+   -e (--env) is for setting environment variables, which can sometimes be useful whenever using env variables in your code. 
    </details>
 
 3. <details> <summary> Check running containers </summary>
-   <code>docker ps</code>
+   Checking running containers can be done by <code>docker ps</code>. What about stopped containers?
+   <details><code>docker ps -a</code></details>
+
    </details>
 
 ## Exercise 4: Push and pull
