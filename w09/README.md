@@ -12,6 +12,7 @@
 For the exercises:
 
 * [Docker: Overview](https://docs.docker.com/get-started/docker-overview/)
+* [Docker: Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
 * [Docker: Concepts (basics and building images + containers)](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
   * Skip the following sections 
     * *The basics -- What is Docker Compose?*
