@@ -120,13 +120,20 @@ As described in the previous section, Docker is really a way to run code in a re
 -->
 
 1. <details> <summary> Build out our CCDS repo with a train.py script </summary>
-   Exercise description
+   Go to where you have your projects and run <code>ccds</code>. You can also initialise git with <code>git init</code>.
+
+   To make it easy, there is a [./resources/train.py](resources/train.py) that you can copy to your project. So for example:
+
+   <pre><code>cp resources/train.py path/to/project/modeling/train.py</code></pre>
+
    </details>
 2. <details> <summary> Create train.dockerfiler </summary>
-   Exercise description
+   You can use your favourite tool to do this. Or do:
+
+   <pre><code>touch path/to/project/train.dockerfile</code></pre>
    </details>
 3. <details> <summary> Find appropiate base-image </summary>
-   Exercise description
+   python:3.9 for example.
    </details>
 4. <details> <summary> Modify example Dockerfile to fit our use-case</summary>
    Inspired from <a href="https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/">this website:</a>
