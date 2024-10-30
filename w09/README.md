@@ -127,7 +127,7 @@ As described in the previous section, Docker is really a way to run code in a re
    <pre><code>cp resources/train.py path/to/project/modeling/train.py</code></pre>
 
    </details>
-2. <details> <summary> Create train.dockerfiler </summary>
+2. <details> <summary> Create train.dockerfile </summary>
    You can use your favourite tool to do this. Or do:
 
    <pre><code>touch path/to/project/train.dockerfile</code></pre>
