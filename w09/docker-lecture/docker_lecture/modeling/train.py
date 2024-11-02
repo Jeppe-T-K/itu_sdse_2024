@@ -29,6 +29,6 @@ accuracy_score = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy_score}')
 
 # Save model in artifacts
-shutil.rmtree("./artifacts", ignore_errors=True)
+shutil.rmtree("artifacts", ignore_errors=True)
 os.makedirs("artifacts", exist_ok=True)
 joblib.dump(clf, "artifacts/model.pkl")
